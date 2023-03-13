@@ -71,7 +71,6 @@ const EditUser = (props) => {
           />
         </div>
         <div className="form-control">
-          <label></label>
           <button className='btn'>Update</button>
           <button className='btn' onClick={() => props.setEditing(false)}>Cancel</button>
         </div>

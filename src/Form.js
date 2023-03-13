@@ -43,15 +43,14 @@ const Form = (props) =>{
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.func(item);
-    setItem(initialState);
+    if(!item.name||!item.password||!item.email||!item.mob||!item.age) return;
+      props.func(item);
+      setItem(initialState);
+      toast.success("Data Added Successfully")
 
-    toast.success("Data Added Successfully")
+    
     
   };
-
-
-
 
   return(
     <div className="Form">
@@ -69,6 +68,7 @@ const Form = (props) =>{
             placeholder="Enter Name..."
             onChange={handleInputChange}
           />
+          
         </div>
         <div className="form-control">
           <label>Password</label>
@@ -79,6 +79,7 @@ const Form = (props) =>{
             placeholder="Enter Password..."
             onChange={handleInputChange}
           />
+          
         </div>
         <div className="form-control">
           <label>Email</label>
@@ -89,6 +90,7 @@ const Form = (props) =>{
             placeholder="Enter Email..."
             onChange={handleInputChange}
           />
+          
         </div>
         <div className="form-control">
           <label>Mobile</label>
@@ -99,6 +101,7 @@ const Form = (props) =>{
             placeholder="Enter Mobile..."
             onChange={handleInputChange}
           />
+          
         </div>
         <div className="form-control">
           <label>Age</label>
@@ -109,6 +112,7 @@ const Form = (props) =>{
             placeholder="Enter Age..."
             onChange={handleInputChange}
           />
+          
         </div>
         <div className="form-control">
           <button className="btn" type="submit">Submit</button>
