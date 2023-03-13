@@ -43,6 +43,7 @@ input{
   width: 100px;
   background: url("https://img.icons8.com/color/100/user");
   margin: auto;
+  background-size: cover;
   border-radius: 50%;
   box-sizing: border-box;
   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
