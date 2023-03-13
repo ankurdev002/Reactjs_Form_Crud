@@ -90,7 +90,12 @@ const removeItem=(id)=>{
   const copydata = [...data];
   const copy=copydata.filter((v,i)=>i!==id);
   setData(copy);
-  toast.error("Data Deleted Successfully")
+  toast.error("Data Deleted Successfully",{
+    style:{
+      background:'linear-gradient(#333,#cf352e)',
+      color: 'white',
+    }
+  })
 };
 
 const [editing, setEditing] = useState(false);
@@ -123,7 +128,12 @@ const [currentUser, setCurrentUser] = useState(initialFormState);
     setData(data.map((user) => (user.id === id ? updateUser : user)));
     toast(<div className='toastcontent'>
       <img src='https://cdn-icons-png.flaticon.com/64/9964/9964187.png'/>
-      <p>Data Updated Succesfully</p></div>)
+      <p>Data Updated Succesfully</p></div>,{
+              style:{
+                background:'linear-gradient(to right,#333,#AFEEEE)',
+                color: 'white',
+              }
+      })
   };
 
   console.log(data)

@@ -43,10 +43,27 @@ const Form = (props) =>{
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(!item.name||!item.password||!item.email||!item.mob||!item.age) return;
+    if(!item.name||!item.password||!item.email||!item.mob||!item.age) 
+      return toast(<div className="toastcontent">
+        <img src="https://cdn-icons-png.flaticon.com/64/9890/9890209.png"/>
+        <p>Please Enter All Details</p>
+        </div>
+      ,{
+      position: toast.POSITION.TOP_CENTER,
+      style:{
+        background:'linear-gradient(to right,#333,#cf352e)',
+        color: 'white',
+      }
+    });
       props.func(item);
       setItem(initialState);
-      toast.success("Data Added Successfully")
+      toast.success("Data Added Successfully",
+      {
+        style:{
+          background:'linear-gradient(#333,#00D100)',
+          color: 'white',
+        }
+      })
 
     
     
