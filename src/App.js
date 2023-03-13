@@ -129,7 +129,8 @@ const [currentUser, setCurrentUser] = useState(initialFormState);
   console.log(data)
   console.log(setData)
 
-  return (<>
+  return (
+  <>
   <div className="flex-large">
           {editing ? (
             <div>
@@ -147,11 +148,13 @@ const [currentUser, setCurrentUser] = useState(initialFormState);
             </div>
           )}
         </div>
+        <div>
             <Table dataList={data} 
             deleteItems={removeItem}
             editRow={editRow}/>
             <ToastContainer/>
-            </>
+          </div>
+    </>
   );
   }
 

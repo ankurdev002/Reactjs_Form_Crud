@@ -11,7 +11,7 @@ input{
 .Form{
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #ecf0f3;
   display: flex;
   align-items: center;
@@ -23,7 +23,8 @@ input{
 .container{
   position: relative;
   width: 50%;
-  height: auto;
+  height: 50%;
+  margin: 40px;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
@@ -138,7 +139,6 @@ input {
 
   
 table {
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     background-color: white;
@@ -150,9 +150,16 @@ table {
     letter-spacing: 2px;
   }
   
-   tr,th {
+   th {
     text-align: center;
     padding: 20px;
+    font-weight: 500;
+
+  }
+  tr{
+    text-align: center;
+    padding: 20px;
+    font-weight: 300;
   }
   
   tr:nth-child(even) {
@@ -171,3 +178,4 @@ table {
     width: 20px;
     margin-right: 15px;
   }
+
